@@ -1,9 +1,6 @@
 import controller.produto_controller as produto_controller
 import controller.cliente_controller as cliente_controller
 
-cliente_controller.cadstrar()
-cliente_controller.adicionar_no_carrinho()
-
 def menu_admin():
     while True:
         print('Menu Admin')
@@ -21,16 +18,11 @@ def menu_admin():
             case 0:
                 break
 
-
-menu_admin()
-
-produto_controller.cadastrar()
-produto_controller.listar()
-
 while True:
     print('Menu Principal')
     print('1. Cadastro cliente')
     print('2. Listar cliente')
+    print('3. Menu Admin')
     print('0. Sair')
 
     op = int(input('> '))
@@ -40,5 +32,7 @@ while True:
             cliente_controller.cadastrar()
         case 2:
             cliente_controller.listar()
+        case 3:
+            menu_admin()
         case 0:
             break
